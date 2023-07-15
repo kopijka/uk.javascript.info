@@ -1,13 +1,13 @@
-# Fetch users from GitHub
+# Отримайте дані про користувачів GitHub
 
-Create an async function `getUsers(names)`, that gets an array of GitHub logins, fetches the users from GitHub and returns an array of GitHub users.
+Створіть асинхронну функцію `getUsers(names)`, котра отримує на вхід масив логінів користувачів GitHub, та запитує у GitHub інформацію про них та повертає масив об'єктів-користувачів.
 
-The GitHub url with user information for the given `USERNAME` is: `https://api.github.com/users/USERNAME`.
+Інформація про користувачів GitHub із логіном `USERNAME` доступна по зсилці: `https://api.github.com/users/USERNAME`.
 
-There's a test example in the sandbox.
+У пісочниці є тестовий приклад.
 
-Important details:
+Важливі деталі:
 
-1. There should be one `fetch` request per user.
-2. Requests shouldn't wait for each other. So that the data arrives as soon as possible.
-3. If any request fails, or if there's no such user, the function should return `null` in the resulting array.
+1. На кожного користувача повинен бути один запит `fetch`.
+2. Запити не мають очікувати на завершення один одного. Треба, щоб дані приходили як найшвидше.
+3. Якщо, якийсь запит завершуєся помилкою або виявилося, що даних про запитуваного користувача відсутні, то функція має повертати значення `null` у масиві результатів.
